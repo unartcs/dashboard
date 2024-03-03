@@ -2,7 +2,7 @@ import React from "react";
 import usersData from "../data/UsersData";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import { FaUsers } from "react-icons/fa";
+import { MdBusinessCenter } from "react-icons/md";
 
 const options = {
   chart: {
@@ -58,7 +58,7 @@ const ClientsWidget = () => {
   return (
     <div className="clients-widget-wrapper flex bg-mainColor p-7">
       <div className="widget-info flex flex-col w-[20rem] text-blue-400 text-xl">
-        <FaUsers size={32} color="#60a5fa" />
+        <MdBusinessCenter size={32} color="#60a5fa" />
         <h1 className="text-white">2,157</h1>
         <h2>Total clients</h2>
       </div>

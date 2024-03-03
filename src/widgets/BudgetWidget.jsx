@@ -53,7 +53,7 @@ const options = {
 const BudgetWidget = () => {
   return (
     <div className="budget-widget-wrapper flex flex-col gap-5 bg-mainColor p-7">
-      <div className="widget-info flex flex-col w-[20rem] text-blue-400 text-xl">
+      <div className="widget-info flex justify-center gap-5 text-blue-400 text-xl">
         <h1 className="text-white">3 Year</h1>
         <h2>Budget Spent</h2>
       </div>
