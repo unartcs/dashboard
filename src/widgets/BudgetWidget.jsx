@@ -9,26 +9,44 @@ const options = {
     type: "column",
     width: 500,
     height: 300,
-    backgroundColor: null
+    backgroundColor: null,
+  },
+  title: {
+    text: null,
   },
   xAxis: {
     categories: [2021, 2022, 2023],
+    labels: {
+      style: {
+        color: "white",
+      },
+    },
   },
   yAxis: {
     allowDecimals: false,
-    
+    labels: {
+      style: {
+        color: "white",
+      },
+    },
     title: {
-      text: "Money spent",
+      text: null,
     },
   },
   credits: {
     enabled: false,
   },
-  title: {
-    text: null,
-  },
   plotOptions: {
-    
+    column: {
+      dataTables: {
+        color: "white",
+      },
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: "white",
+    },
   },
   series: [
     {
@@ -37,7 +55,7 @@ const options = {
     },
     {
       name: "IT",
-      data: [15600, 32000, 15800],
+      data: [11600, 12000, 12800],
     },
     {
       name: "Artists",
@@ -57,8 +75,8 @@ const BudgetWidget = () => {
         <h1 className="text-white">3 Year</h1>
         <h2>Budget Spent</h2>
       </div>
-      <div className="text-white">
-        <HighchartsReact options={options} highcharts={Highcharts}/>
+      <div className="text-white self-center">
+        <HighchartsReact options={options} highcharts={Highcharts} />
       </div>
     </div>
   );

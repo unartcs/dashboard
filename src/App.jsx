@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Topbar from "./components/Topbar";
-import Main from "./pages/Main";
+import Pages from "./pages/Pages";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Navbar />
       <div className="app-content flex flex-col w-svw">
         <Topbar />
-        <Main/>
+        <Pages/>
       </div>
     </div>
   );

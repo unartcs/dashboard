@@ -10,6 +10,7 @@ import {
 import { FaRegNoteSticky, FaRegCircleQuestion } from "react-icons/fa6";
 import { FiUsers } from "react-icons/fi";
 import { PiCurrencyDollarSimple, PiTrafficCone } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState("true");
@@ -19,7 +20,9 @@ const Navbar = () => {
       {showMenu ? (
         <div className="navbar-wrapper flex flex-col gap-10 bg-[#222f45] p-4 h-full w-[16rem] text-white pt-5 animate-extendNavbar">
           <div className="flex items-end justify-between animate-fadeIn">
-            <h1 className="text-xl font-bold font-sans animate-fadeIn">Dashboarder</h1>
+            <h1 className="text-xl font-bold font-sans animate-fadeIn">
+              Dashboarder
+            </h1>
             <div
               className="cursor-pointer animate-fadeIn"
               onClick={() => setShowMenu(!showMenu)}
@@ -29,31 +32,46 @@ const Navbar = () => {
           </div>
           <div className="navbar-main flex flex-col gap-2 animate-fadeIn">
             <Profile />
-            <h2 className="text-sm font-semibold text-gray-400 animate-fadeIn">General</h2>
-            <ul className="navbar-main-menu flex flex-col gap-2 self-center animate-fadeIn">
+            <h2 className="text-sm font-semibold text-gray-400 animate-fadeIn">
+              General
+            </h2>
+            <ul className="navbar-main-menu flex flex-col gap-2 self-center animate-fadeIn w-fit">
+              <li className="flex items-center gap-2 w-fit">
+                <Link to={"/"} className="flex items-center gap-2">
+                  <IoHomeOutline />
+                  Overview
+                </Link>
+              </li>
+
               <li className="flex items-center gap-2">
-                <IoHomeOutline />
-                Overview
+                <Link to={"/users"} className="flex items-center gap-2">
+                  <LiaUsersCogSolid />
+                  Manage Users
+                </Link>
               </li>
               <li className="flex items-center gap-2">
-                <LiaUsersCogSolid />
-                Manage Users
+                <Link to={"/products"} className="flex items-center gap-2">
+                  <MdOutlineProductionQuantityLimits />
+                  Manage Products
+                </Link>
               </li>
               <li className="flex items-center gap-2">
-                <MdOutlineProductionQuantityLimits />
-                Manage Products
+                <Link to={"/notes"} className="flex items-center gap-2">
+                  <FaRegNoteSticky />
+                  Manage Notes
+                </Link>
               </li>
               <li className="flex items-center gap-2">
-                <FaRegNoteSticky />
-                Manage Notes
+                <Link to={"/faq"} className="flex items-center gap-2">
+                  <FaRegCircleQuestion />
+                  FAQ
+                </Link>
               </li>
               <li className="flex items-center gap-2">
-                <FaRegCircleQuestion />
-                FAQ
-              </li>
-              <li className="flex items-center gap-2">
-                <IoSettingsOutline />
-                Settings
+                <Link to={"/settings"} className="flex items-center gap-2">
+                  <IoSettingsOutline />
+                  Settings
+                </Link>
               </li>
             </ul>
           </div>
@@ -66,20 +84,28 @@ const Navbar = () => {
             </h2>
             <ul className="navbar-charts-menu flex flex-col gap-2 self-center animate-fadeIn">
               <li className="flex items-center gap-2 ">
-                <PiCurrencyDollarSimple />
-                Sales chart
+                <Link to={"/sales-chart"} className="flex items-center gap-2">
+                  <PiCurrencyDollarSimple />
+                  Sales chart
+                </Link>
               </li>
               <li className="flex items-center gap-2">
-                <FiUsers />
-                Users chart
+                <Link to={"/users-chart"} className="flex items-center gap-2">
+                  <FiUsers />
+                  Users chart
+                </Link>
               </li>
               <li className="flex items-center gap-2">
-                <PiTrafficCone />
-                Traffic chart
+                <Link to={"/traffic-chart"} className="flex items-center gap-2">
+                  <PiTrafficCone />
+                  Traffic chart
+                </Link>
               </li>
               <li className="flex items-center gap-2">
-                <MdOutlineCampaign />
-                Campaigns chart
+                <Link to={"/campaigns-chart"} className="flex items-center gap-2">
+                  <MdOutlineCampaign />
+                  Campaigns chart
+                </Link>
               </li>
             </ul>
           </div>
