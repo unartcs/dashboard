@@ -1,4 +1,4 @@
-const usersData = [
+export const usersData = [
     {
       id: 1,
       name: "John Doe",
@@ -78,7 +78,8 @@ const usersData = [
       age: 27,
       phone: "555-444-5555",
       role: "user"
-    }
+    },
+    
   ];
   
 export default usersData
