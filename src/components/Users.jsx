@@ -6,14 +6,13 @@ const columns = [
     {field: 'name', headerName: 'Name', flex: 1},
     {field: 'email', headerName: 'Email Address', flex: 1},
     {field: 'phone', headerName: 'Phone Number', flex: 1},
-    {field: 'role', headerName: 'Role', color: 'white'},
+    {field: 'role', headerName: 'Role'},
 ]
 
 const Users = () => {
   return (
-    <div className='text-white'>
-        
-        <DataGrid rows={usersData} columns={columns} sx={{color: 'white'}}/>
+    <div className=''>
+        <DataGrid rows={usersData} columns={columns} sx={{color: 'var(--textColor)'}}/>
     </div>
   )
 }

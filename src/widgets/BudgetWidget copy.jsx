@@ -1,7 +1,6 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import React, { useEffect } from "react";
-var isDarkTheme = false;
 
 function getCSSVariableValue(variable) {
   return getComputedStyle(document.documentElement).getPropertyValue(variable);
@@ -12,9 +11,6 @@ const options = {
     width: 500,
     height: 300,
     backgroundColor: null,
-    style: {
-      color: isDarkTheme ? "red" : "blue",
-    },
   },
   title: {
     text: null,
@@ -74,17 +70,20 @@ const options = {
 };
 
 const BudgetWidget = () => {
+  useEffect(()=> {
+    const chart = document.getElementById('budget-chart');
+    if (chart) {
+      chart.style.color = 'red'
+    }
+  },[])
   return (
     <div className="budget-widget-wrapper flex flex-col gap-5 bg-mainColor p-7">
       <div className="widget-info flex justify-center gap-5 text-blue-400 text-xl">
         <h1 className="text-white">3 Year</h1>
         <h2>Budget Spent</h2>
       </div>
-      <div className="text-white self-center">
-        <HighchartsReact
-          options={options}
-          highcharts={Highcharts}
-        />
+      <div className="text-white self-center" id="budget-chart">
+        <HighchartsReact options={options} highcharts={Highcharts} className="text-red"/>
       </div>
     </div>
   );

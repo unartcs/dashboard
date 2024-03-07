@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --backColor: 20 26 39;
+    --mainColor: 34 47 69;
+    --textColor: 255 255 255;
+    --focusColor: 105 127 176;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --backColor: 20 26 39;
+      --mainColor: 34 47 69;
+      --textColor: 255 255 255;
+      --focusColor: 105 127 176;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+        --backColor: 245 245 245;
+        --mainColor: 213 233 233;
+        --textColor: 0 0 0;
+        --focusColor: 225 225 225;
+    }
+  }
+  :root[data-theme="dark"] {
+    --backColor: 20 26 39;
+    --mainColor: 34 47 69;
+    --textColor: 255 255 255;
+    --focusColor: 105 127 176;
+  }
+
+  :root[data-theme="light"] {
+    --backColor: 245 245 245;
+    --mainColor: 213 233 233;
+    --textColor: 0 0 0;
+    --focusColor: 225 225 225;
+
+  }
+}
+
+/* 
+
+        darkBg: "#141a27",
+        darkMainColor: "#222f45",
+        darkMainText: 'white',
+        lightBg: "white",
+        lightMainColor: "orange",
+        lightMainText: "black",
+        
+        
+        */

@@ -8,7 +8,7 @@ import SalesWidget from "../widgets/SalesWidget";
 const Main = () => {
   return (
     <div className="main-wrapper px-10 flex flex-col gap-5">
-      <h1 className="text-2xl font-bold text-white">Dashboard Overview</h1>
+      <h1 className="text-2xl font-bold text-textColor">Dashboard Overview</h1>
       <div className="main-top-section grid grid-cols-auto grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <UsersWidget />
         <ClientsWidget />

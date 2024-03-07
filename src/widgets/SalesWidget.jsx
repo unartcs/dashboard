@@ -34,20 +34,20 @@ const options = {
       data: [
         {
           name: "Asia",
-          y: 15,
+          y: 10,
         },
         {
           name: "USA",
-          y: 34,
+          y: 39,
         },
         {
           name: "Africa",
-          y: 9,
+          y: 5,
         },
 
         {
           name: "Europe",
-          y: 42,
+          y: 46,
         },
       ],
     },

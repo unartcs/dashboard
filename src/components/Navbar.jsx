@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <div>
       {showMenu ? (
-        <div className="navbar-wrapper flex flex-col gap-10 bg-[#222f45] p-4 h-full w-[16rem] text-white pt-5 animate-extendNavbar">
+        <div className="navbar-wrapper flex flex-col gap-10 bg-mainColor p-4 h-full w-[16rem] text-white pt-5 animate-extendNavbar">
           <div className="flex items-end justify-between animate-fadeIn">
             <h1 className="text-xl font-bold font-sans animate-fadeIn">
               Dashboarder
@@ -32,7 +32,7 @@ const Navbar = () => {
           </div>
           <div className="navbar-main flex flex-col gap-2 animate-fadeIn">
             <Profile />
-            <h2 className="text-sm font-semibold text-gray-400 animate-fadeIn">
+            <h2 className="text-sm font-semibold text-focusColor animate-fadeIn">
               General
             </h2>
             <ul className="navbar-main-menu flex flex-col gap-2 self-center animate-fadeIn w-fit">
@@ -77,7 +77,7 @@ const Navbar = () => {
           </div>
           <div className="navbar-charts flex flex-col gap-2">
             <h2
-              className="text-sm font-semibold text-gray-400
+              className="text-sm font-semibold text-focusColor
               animate-fadeIn"
             >
               Charts

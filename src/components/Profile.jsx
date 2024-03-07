@@ -8,7 +8,7 @@ const Profile = () => {
       </div>
       <div className="profile-info flex flex-col justify-between items-center">
         <h1 className="profile-name text-lg font-semibold">John Doe</h1>
-        <h2 className="profile-title text-sm text-blue-400">System Admin</h2>
+        <h2 className="profile-title text-sm text-focusColor">System Admin</h2>
       </div>
     </div>
   );

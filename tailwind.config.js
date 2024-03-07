@@ -4,8 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        backColor: "#141a27",
-        mainColor: "#222f45",
+        backColor: 'rgb(var(--backColor) / <alpha-value>)',
+        mainColor: "rgb(var(--mainColor) / <alpha-value>)",
+        textColor: "rgb(var(--textColor) / <alpha-value>)",
+        focusColor: "rgb(var(--focusColor) / <alpha-value>)",
       },
       animation: {
         extend: "extend 0.4s ease-in-out forwards",
